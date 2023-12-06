@@ -1,0 +1,6 @@
+<label for="nom">Nom</label>[text* nom class:form-input]
+<label for="prenom">Prenom</label>[text* prenom class:form-input]
+<label for="email">Email</label>[email* email class:form-input]
+<label for="sujet">Sujet</label>[text* sujet class:form-input]
+<label for="message">Message</label>[textarea* message class:form-textarea]
+<button class="btn">Envoyer</button>

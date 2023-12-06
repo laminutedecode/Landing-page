@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+  border:none;
+  scroll-behavior: smooth;
+}
+
+:root {
+    --light: #fff;
+    --dark: #353535;
+    --main: #0e4748;
+    --main2: #20e9ec;
+}
+
+body {
+    background: #030303;
+    color: var(--light)
+}
+
+.heading-title {
+    position: relative;
+    margin: 4rem auto 2rem;
+    overflow: hidden;
+}
+
+.heading-title h2 {
+    text-align: center;
+    font-size: clamp(30px, 5vw, 45px);
+    background: linear-gradient(to top, var(--main), var(--main2));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+
+/* ########################## */
+/* Navigation*/
+/* ########################## */
+
+header {
+    position: absolute;
+    top: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: 100%;
+    max-width: 1000px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,.7);
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,.2);
+    transition: .5s;
+    padding: 0 1rem;
+}
+
+.logo  img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.navigation {
+    display: flex;
+    column-gap: .5rem;
+    height: 100%;
+}
+
+.navigation li {
+    height: 100%;
+    line-height: 80px;
+}
+
+.navigation li:hover {
+    cursor: pointer;
+    background: #168d8f8f;
+}
+
+.navigation a {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--light);
+    padding: 0.5rem 1rem;
+}
+
+
+#burger-menu {
+    font-size: 2rem;
+    color: var(--light);
+    display: none;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+/* ########################## */
+/* Home*/
+/* ########################## */
+
+.home {
+    width: 100%;
+    height: 100vh;
+    background: no-repeat center / cover url('./images//ff7-bg.jpg');
+    position: relative;
+    overflow-y: hidden;
+
+}
+
+.home-filter {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    background: rgba(0,0,0,.4);
+}
+
+.home-content {
+   position: relative;
+   z-index: 10;
+   display: flex;
+   flex-direction: column;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   min-height: 100vh;
+   padding: 0 1rem;
+   text-align: center;
+}
+
+.home-logo {
+    width: 300px;
+}
+
+.home-content p {
+    color: var(--light);
+    margin-bottom: 1rem;
+}
+
+.img-header {
+    position: absolute;
+    bottom: 0rem;
+    left: 1rem;
+    z-index: -1;
+    opacity: .9;
+    width: 30vw
+}
+
+.btn {
+    color: var(--light);
+    border: 1px solid var(--light);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: var(--light);
+    color: var(--dark);
+}
+
+/* ########################## */
+/* Boutique */
+/* ########################## */
+
+.boutique-container {
+    max-width: 960px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 1fr;
+    margin-top: 2rem;
+}
+
+.boutique-box img {
+    width: 100%;
+    height: 100%;
+}
+
+.boutique-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.boutique-content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background: rgba(0,0,0,.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .2s ease-in-out;
+}
+
+.boutique-box:hover .boutique-content {
+    top: 0;
+}
+
+/* ########################## */
+/* personnages*/
+/* ########################## */
+
+.slide-box {
+    width: 100%;
+    min-height:100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .slide-box img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+  }
+  
+  .slide-box::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(2, 3, 7, .4); 
+    z-index: 0; 
+  }
+  .swiper-pagination-bullet {
+    width: 6px!important;
+    height: 6px!important;
+    border-radius: 0.2rem!important;
+    background: var(--main2)!important;
+    opacity: 1!important;
+    transition: .2s ease-in-out!important;
+  }
+  
+  .swiper-pagination-bullet-active {
+    width: 1.5rem!important;
+    background: var(--main)!important;
+  }
+  
+  .slide-box-content {
+    z-index: 1000;
+    padding: 0 100px;
+  }
+  .slide-box-content span {
+    color: var(--main2);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: clamp(18px, 5vw, 30px)
+  }
+  
+  .slide-box-content h3  {
+    font-size: clamp(30px, 5vw, 60px);
+    color: var(--text);
+    margin-bottom: 1rem;
+  }
+
+ 
+
+/* ########################## */
+/* Breakpoint*/
+/* ########################## */
+
+@media screen and (max-width: 1080px) {
+    .slide-box-content {
+      padding: 0 20px;
+    }
+  }
+  @media screen and (max-width: 991px) {
+    header {
+      padding: 18px 4%;
+    }
+  
+    section {
+     padding: 50px 4%;
+  
+    }
+  }
+
+@media screen and (max-width: 880px){
+
+    header {
+        top: 0;
+        justify-content: space-between;
+        padding: 0 1rem;
+        position: fixed;
+    }
+    #burger-menu {
+        display: block;
+    }
+    .navigation {
+        position: absolute;
+        top: 80px;
+        left: 0px;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        transition: .2s ease-in-out;
+        box-shadow: 0 5px 5px rgba(0,0,0,.2);
+    }
+
+    .navigation li {
+        background: rgba(0,0,0,.7);
+    }
+    .navigation  a {
+        display: block;
+        padding-left: 1rem;
+    }
+    .navigation.active {
+       display: flex;
+    }
+    .img-header {
+        width: 400px;
+        left: -10rem;
+  
+}}
+
+
+

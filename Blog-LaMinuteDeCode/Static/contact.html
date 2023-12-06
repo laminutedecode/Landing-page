@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="./images/favicon-mdc.png"/>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- ##################### -->
+    <!-- Navigation -->
+    <!-- ##################### -->
+
+    <nav class="navigation-principale">
+        <a href="./single.html" class="logo"><img src="./images/logo.svg" alt=""></a>
+        <ul class="menu">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">À propos</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+        <div class="icones-navigation">
+            <div id="btn-search"><ion-icon name="search-outline"></ion-icon></div>
+        <div id="btn-burger"><ion-icon name="menu-outline"></ion-icon></div>
+        </div>
+        <form action="#" class="search">
+            <input type="search" placeholder="Que recherchez vous ?">
+        </form>
+    </nav>
+
+    <!-- ##################### -->
+    <!-- Home Page -->
+    <!-- ##################### -->
+
+    <section class="page-home">
+        <div class="page-home-content">
+            <a href="./index.html" class="back">Retour à la page d'accueil</a>
+            <h1>Contact</h1>
+        </div>
+    </section>
+
+
+    <!-- ##################### -->
+    <!--  Content -->
+    <!-- ##################### -->
+
+    <section class="container">
+        <div class="heading"><h2>Nous <span>contacter</span></h2></div>
+
+       <div class="container-content">
+
+        <form action="#">
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" required>
+            <label for="prenom">Prenom</label>
+            <input type="text" id="prenom" required>
+            <label for="email">E-mail</label>
+            <input type="email" id="email" required>
+            <label for="sujet">Sujet</label>
+            <input type="text" id="sujet" required>
+            <label for="message"> Message</label>
+            <textarea name="message" id="message" required></textarea>
+            <button type="submit" class="btn">Envoyer votre message</button>
+        </form>
+
+        
+
+       </div>
+
+    </section>
+    
+
+    <!-- ##################### -->
+    <!-- Footer  -->
+    <!-- ##################### -->
+    <footer>
+        <p>&copy; La Minute De Code - Tous droits réservés - 2023 </p>
+        <div class="social">
+            <a href="#"><ion-icon name="logo-discord"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-youtube"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-tiktok"></ion-icon></a>
+        </div>
+    </footer>
+
+
+
+    <!-- Icones -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- Script -->
+    <script src="app.js"></script>
+</body>
+</html>

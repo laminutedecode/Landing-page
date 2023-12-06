@@ -1,0 +1,610 @@
+/* ####################### */
+/* Global */
+/* ####################### */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --main: rgb(150, 99, 254);
+    --main2: rgb(176, 139, 251);
+    --main3: rgb(246, 212, 118);
+    --bg: #010101;
+    --text: #fff;
+    --shadow: 0 0 5px var(--main2), 0 0 25px var(--main2);
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+}
+
+section {
+    width: 100%;
+    padding: 50px 100px;
+    margin: 4rem 0rem;
+}
+
+.heading{
+    padding: 2rem 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: clamp(25px, 5vw, 60px);
+    position: relative;
+    text-shadow: var(--shadow);
+    margin-bottom: 3rem;
+}
+.btn {
+    padding: 10px 15px;
+    color: var(--text);
+    border-radius: 7px;
+    transition: .2s ease-in-out;
+    border: 1px solid var(--text)
+}
+.btn:hover {
+    background:var(--main);
+    color: #fff;
+    box-shadow: var(--shadow);
+}
+
+
+/* ####################### */
+/* Navigation */
+/* ####################### */
+
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    background: transparent;
+    transition: .2s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+
+nav.active {
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,.2);
+    background: var(--bg);
+    border-bottom: 1px solid var(--main2);
+}
+
+.logo {
+    width: 30px;
+    height: 30px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu a {
+    padding: 10px 15px;
+    margin: 0 1rem;
+    color: var(--text);
+    border-radius: 7px;
+    transition: .2s ease-in-out;
+}
+.menu a:hover{
+    background:var(--main);
+    color: #fff;
+    border: 1px solid var(--text);
+    box-shadow: var(--shadow);
+}
+.menu a.active  {
+    background:var(--main);
+    color: #fff;
+    border: 1px solid var(--text);
+    box-shadow: var(--shadow);
+}
+#burger-menu {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: var(--main);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    display: none;
+}
+
+#burger-menu:hover  {
+    color: var(--main2);
+}
+
+
+/* ####################### */
+/* Home */
+/* ####################### */
+
+#home {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    padding: 0 1rem;
+}
+
+.home-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.home-video  video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.home-filter{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.home-content {
+    position: relative;
+    z-index: 5;
+    text-align: center;
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 1rem
+}
+.home-content p {
+    color: var(--main);
+    margin-bottom: 0.5rem;
+}
+.home-content h1 {
+    font-size: clamp(30px, 5vw, 50px);
+}
+.home-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem auto 0;
+    border: 1px solid var(--main2);
+    color: var(--text);
+    font-size: 1.5rem;
+    border-radius: 50%;
+    transition: .2s ease-in-out;
+    animation: animImg 4s ease-in-out infinite;
+}
+.home-icon:hover {
+    background:var(--main);
+    color: #fff;
+    box-shadow: var(--shadow);
+}
+@keyframes animImg {
+    0%{
+        transform: translateY(0%)
+    }
+    50%{
+        transform: translateY(-2.4rem)
+    }
+    100%{
+        transform: translateY(0%)
+    }
+}
+
+/* ####################### */
+/* Devis */
+/* ####################### */
+
+.devices-content {
+    width: 100%;
+    max-width:1080px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+}
+.device-box {
+    text-align: center;
+    border-radius: 7px;
+    padding: 1rem;
+    transition: .2s ease-in-out;
+}
+.device-box:hover {
+    box-shadow: var(--shadow);
+    transform: translateY(-10px);
+}
+
+.device-box:hover ion-icon, .device-box:hover h3 {
+    color: var(--main)
+}
+.device-box:hover p {
+    color: var(--main3)
+}
+
+.device-box ion-icon {
+    font-size: 50px;
+    margin-bottom: 0.5rem;
+}
+.device-box h3 {
+    margin-bottom: 1rem;
+}
+
+/* ####################### */
+/* Portfolio */
+/* ####################### */
+
+#portfolio {
+    width: 100%;
+    background: no-repeat center / cover url('./img/portfolio-bg.jpg');
+    position: relative;
+}
+
+.portfolio-filtre {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.portfolio-container {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    position: relative;
+    z-index: 30;
+}
+
+.portfolio-box {
+    width: 100%;
+    padding: 1rem;
+    background: var(--bg);
+    border-radius: 7px;
+    transition: .2s ease-in-out;
+    position: relative;
+}
+.portfolio-box:hover {
+    box-shadow: var(--shadow);
+    transform: translateY(-10px);
+}
+.portfolio-box img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 7px;
+}
+
+.portfolio-box h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.portfolio-box p {
+    margin-bottom: 3.5rem;
+}
+
+.portfolio-box .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+/* ####################### */
+/* A propos */
+/* ####################### */
+
+.about-container {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.about-img img {
+  width: 100%;
+}
+
+.about-content span {
+  color: var(--main);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.about-content p {
+  margin: 1rem 0 2rem;
+}
+
+/* ####################### */
+/* Team */
+/* ####################### */
+
+
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(240px, 1fr));
+    gap: 2rem;
+  }
+
+  .team-box {
+    position: relative;
+    min-height: 500px;
+    border-radius: 7px;
+    overflow:hidden;
+  }
+
+  .team-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .team-box .team-box-content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    background: rgba(0,0,0,.5);
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 1rem;
+    transition: .2s ease-in-out;
+    padding: 2rem;
+  }
+
+  .team-box:hover {
+    box-shadow: var(--shadow);
+  }
+
+  .team-box:hover .team-box-content {
+    top: 0;
+  }
+
+  .team-box-social {
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+  }
+
+  .team-box-social li a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--text);
+    color: var(--text);
+    transition: .2s ease-in-out;
+  }
+
+  .team-box-social li a:hover {
+    box-shadow: var(--shadow);
+    background: var(--main);
+  }
+ 
+
+  
+  /* ################### */
+/* Contact*/
+/* ################### */
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  
+  .contact-infos {
+    flex: 1 1 20rem;
+  }
+  
+  
+  .contact-form {
+    flex: 1 1 20rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .contact-infos h3 {
+    font-size: clamp(18px, 3vw, 30px);
+    color: var(--main2);
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-infos  p {
+    margin-bottom: 0.5rem;
+  }
+  
+  .adress {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+  
+  .adress div {
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  
+  .adress span {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  .social  {
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+    margin-top: 1rem;
+  }
+  
+  .social a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: var(--text);
+    border: 1px solid var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background .2s ease-in-out;
+  }
+  
+  .social a:hover {
+    background: var(--main);
+    box-shadow: var(--shadow);
+  }
+  
+  .contact-form form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  .contact-form form input, .contact-form form textarea {
+    width: 100%;
+    padding: 17px;
+    border-radius: 7px;
+    margin-bottom: 1rem;
+  }
+  .contact-form form input:focus, .contact-form form textarea:focus {
+    box-shadow: var(--shadow);
+  } 
+  .contact-form form textarea {
+    resize: none;
+  }
+  .contact-form form input[type="submit"]{
+    cursor: pointer;
+    background: none;
+  }
+  .contact-form form input[type="submit"]:hover {
+    background: var(--main);
+  }
+  .contact-form form input::placeholder, .contact-form form textarea::placeholder {
+    color: var(--main)
+  }
+
+  /* ####################### */
+/* Footer*/
+/* ####################### */
+  
+footer {
+    padding: 1rem 2rem;
+    background: var(--main);
+    color: var(--text);
+    text-align: center;
+    font-size: .9rem;;
+}
+
+
+/* ####################### */
+/* Breakpoints */
+/* ####################### */
+
+@media screen and (max-width: 991px) {
+    section {
+      padding: 50px 40px;
+    }
+  
+  }
+  
+
+@media screen and (max-width: 850px){
+    #burger-menu {
+        display: block;
+    }
+    .menu {
+        position: absolute;
+        top: -1000px;
+        right: 0;
+        flex-direction: column;
+        width: 100%;
+        row-gap: .5rem;
+        background: var(--bg);
+        border-bottom: 1px solid var(--main);
+        padding: 1rem;
+        transition: .2s ease-in-out;
+    }
+    .menu li {
+        width: 100%;
+        text-align: center;
+    }
+    .menu a {
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
+    .menu.active {
+        top: 100%;
+    }
+}
+
+  
+  @media screen and (max-width: 768px) {
+    .about-container {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  
+    .about-img {
+      order: 2;
+      margin-top: 2rem;
+    }
+  
+  }
+  
+  @media screen and (max-width: 563px) {
+    section {
+      padding: 50px 14px;
+    }
+  
+  }

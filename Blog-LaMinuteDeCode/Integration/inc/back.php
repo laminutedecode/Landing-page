@@ -1,0 +1,1 @@
+<a href="<?php echo esc_url(home_url('/'));?>" class="back">Retour à la page d'accueil</a>

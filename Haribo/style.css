@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* ################### */
+/* Global */
+/* ################### */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    border: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --accent: #a90202;
+    --accent2: #4f0202;
+    --bg: #ffc53d;
+    --text: #333;
+    --light: #fff;
+}
+
+body {
+    color: var(--text)
+}
+
+nav {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 1.5rem 100px;
+    background: transparent;
+    transition: background .2s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+nav img {
+    width: 60px;
+    height: 60px;
+}
+
+.btn-nav {
+    width: 40px;
+    height: 40px;
+    font-size: 1.3rem;
+    background: var(--accent);
+    transition: backgrund .2s ease-in-out;
+    padding: 10px 20px;
+    border-radius: 50%;
+    color: var(--light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-nav:hover {
+    background: var(--accent2);
+}
+
+#home {
+    width: 100%;
+    height: 100vh;
+    background: var(--bg);
+    display: grid;
+    grid-template-columns: 45% 55%;
+    grid-template-rows: auto;
+    place-items: center;
+    padding: 0 100px;
+}
+
+.home-img {
+    width: 600px;
+}
+
+.home-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.home-content h1 {
+    font-size: clamp(30px, 5vw, 55px);
+    color: var(--text)
+}
+
+.home-content h1 span {
+    color: var(--accent)
+}
+
+.home-content p {
+    margin: 1rem 0 2rem;
+}
+
+.btn {
+    padding: 10px 20px;
+    background: var(--accent);
+    transition: background .2s ease-in-out;
+    color: var(--light);
+    font-weight: 500;
+    border-radius: 7px;
+}
+.btn .bx {
+    margin-right: 0.5rem;
+}
+.btn:hover {
+    background: var(--accent2);
+}
+
+#services {
+    padding: 50px 100px;
+}
+
+.heading {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.heading h2 {
+    color: var(--accent);
+    font-size:clamp(25px, 4vw, 40px);
+}
+
+.heading p {
+    font-weight: 400;
+}
+
+.services-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 300px));
+    gap: 4rem;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.box {
+    box-shadow: 10px 10px 41px 0 rgba(0,0,0,.2);
+    padding: 2rem;
+    border-radius: 7px;
+    text-align: center;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.box .bx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    color: var(--accent);
+    font-size: 1.8rem;
+}
+
+.box h3 {
+    font-size: clamp(18px, 3vw, 22px);
+    margin: 1rem 0;
+}
+
+.box:hover, .box.active  {
+    background: var(--accent2);
+    color: var(--light);
+    transform: translateY(-15px)
+}
+
+.box:hover .bx, .box.active .bx{
+    color: var(--light);
+}
+
+#products {
+    padding: 50px 100px;
+}
+
+.products-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.product-img  {
+    width: 400px;
+    height: 500px;
+    border-radius: 80px 0 80px 0;
+    overflow: hidden;
+}
+
+.product-img img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+object-position: right;
+}
+
+.product-box h3{
+    font-size: clamp(20px, 2vw, 25px);
+}
+
+.p-box {
+    display: flex;
+    align-items: center;
+    width: 500px;
+    height: 100px;
+    border-radius: 1rem;
+    box-shadow: 5px 12px 41px rgba(0,0,0,.1);
+    margin-top: 1rem;
+    padding: 2rem
+}
+
+.p-box img {
+    height: 100px;
+
+}
+
+.p-content h4{
+    font-size: 1rem;
+}
+
+.p-content p{
+font-size: .9rem;
+font-weight: 400;
+max-width: 95%;
+}
+
+
+.copy {
+    padding: 1rem 2rem;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 13px;
+    text-align: center;
+}
+
+#contact {
+    padding: 50px 100px;
+}
+.contact-content {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+}
+form {
+    width: 100%;display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form input, form textarea {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #e2e2e2;
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 7px;
+}
+
+form input:focus, form textarea:focus {
+    border-color: var(--bg)
+}
+
+form textarea {
+    height: 150px;
+    resize: none;
+}
+
+form button {
+    cursor: pointer;
+}

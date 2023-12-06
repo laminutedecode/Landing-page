@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- boxicon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <!-- ################## -->
+    <!-- Navigation -->
+    <!-- ################## -->
+
+    <header>
+        <a href="#" class="logo">E<span>SHOP</span></a>
+
+        <ul class="navigation">
+            <li>
+                <a href="#home">Home</a>
+            </li>
+            <li>
+                <a href="#news">Nouveautés</a>
+            </li>
+            <li>
+                <a href="#products">Produits</a>
+            </li>
+            <li>
+                <a href="#reviews">Avis</a>
+            </li>
+        </ul>
+
+        <div class="navigation-icones">
+            <i id="search-icon" class='bx bx-search'></i>
+            <i id="cart-icon" class='bx bx-cart-alt'></i>
+            <i id="user-icon" class='bx bxs-user'></i>
+            <i id="burger-menu" class='bx bx-menu-alt-left' ></i>
+        </div>
+
+        <div class="search-container">
+            <input type="search" placeholder="Que recherchez vous ?">
+        </div>
+
+        <div class="cart-container">
+            <div class="cart-card">
+                  <img src="./images/panier-01.png" alt="">
+                <div class="cart-text">
+                <h3>T-Shirt 12A</h3>
+                <span>30€</span>
+                <span>x1</span>
+                </div>
+            <i class='bx bxs-trash-alt'></i>
+               </div>
+            <div class="cart-card">
+                  <img src="./images/panier-02.png" alt="">
+                <div class="cart-text">
+                <h3>T-Shirt 16A</h3>
+                <span>25€</span>
+                <span>x1</span>
+                </div>
+            <i class='bx bxs-trash-alt'></i>
+               </div>
+               <h2>Total: 55€</h2>
+               <a href="#" class="btn">Voir panier</a>
+        </div>
+
+<div class="user-container">
+    <h2>Connectez vous</h2>
+    <input type="email" placeholder="E-mail">
+    <input type="password" placeholder="Mot de passe">
+    <input class="btn-user" type="submit" value="Connexion">
+    <p>Mot de passe oublié ? <a href="#">Redefinir mot de passe</a></p>
+    <p>Pas de compte ? <a href="#">Créer un compte !</a></p>
+</div>
+
+    </header>
+
+    <!-- ################## -->
+    <!-- Home -->
+    <!-- ################## -->
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <span>E-commerce</span>
+            <h1>Tendance & Tranquillité</h1>
+            <a href="#" class="btn">En savoir plus</a>
+        </div>
+        <div class="home-img">
+            <img src="./images/home.png" alt="">
+        </div>
+    </section>
+
+    <!-- ################## -->
+    <!-- News-->
+    <!-- ################## -->
+    <section class="news" id="news">
+        <div class="section-heading">
+            <h2>Nouvelle <span>Arrivage</span></h2>
+        </div>
+        <div class="swiper news-cont">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide box">
+                    <img src="./images/slide-01.png" alt="">
+                    <div class="content">
+                        <a href="#" class="btn">Ajouter panier</a>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <img src="./images/slide-02.png" alt="">
+                    <div class="content">
+                        <a href="#" class="btn">Ajouter panier</a>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <img src="./images/slide-03.png" alt="">
+                    <div class="content">
+                        <a href="#" class="btn">Ajouter panier</a>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <img src="./images/slide-04.png" alt="">
+                    <div class="content">
+                        <a href="#" class="btn">Ajouter panier</a>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <img src="./images/slide-05.png" alt="">
+                    <div class="content">
+                        <a href="#" class="btn">Ajouter panier</a>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <img src="./images/slide-06.png" alt="">
+                    <div class="content">
+                        <a href="#" class="btn">Ajouter panier</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ################## -->
+    <!-- Products-->
+    <!-- ################## -->
+
+    <section class="products" id="products">
+        <div class="section-heading">
+            <h2>Nos <span>Produits</span></h2>
+        </div>
+
+        <div class="products-container">
+
+            <div class="product-box">
+                <img src="./images/shop-01.jpg" alt="">
+                <div class="product-box-content">
+                    <h2>T-Shirt</h2>
+                    <div class="stars">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <span>25€</span>
+                    <i class='bx bx-cart-alt' ></i>
+                </div>
+            </div>
+
+            <div class="product-box">
+                <img src="./images/shop-02.jpg" alt="">
+                <div class="product-box-content">
+                    <h2>T-Shirt</h2>
+                    <div class="stars">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <span>25€</span>
+                    <i class='bx bx-cart-alt' ></i>
+                </div>
+            </div>
+
+            <div class="product-box">
+                <img src="./images/shop-03.jpg" alt="">
+                <div class="product-box-content">
+                    <h2>T-Shirt</h2>
+                    <div class="stars">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <span>25€</span>
+                    <i class='bx bx-cart-alt' ></i>
+                </div>
+            </div>
+            <div class="product-box">
+                <img src="./images/shop-04.jpg" alt="">
+                <div class="product-box-content">
+                    <h2>T-Shirt</h2>
+                    <div class="stars">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <span>25€</span>
+                    <i class='bx bx-cart-alt' ></i>
+                </div>
+            </div>
+            <div class="product-box">
+                <img src="./images/shop-05.jpg" alt="">
+                <div class="product-box-content">
+                    <h2>T-Shirt</h2>
+                    <div class="stars">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <span>25€</span>
+                    <i class='bx bx-cart-alt' ></i>
+                </div>
+            </div>
+            <div class="product-box">
+                <img src="./images/shop-06.jpg" alt="">
+                <div class="product-box-content">
+                    <h2>T-Shirt</h2>
+                    <div class="stars">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <span>25€</span>
+                    <i class='bx bx-cart-alt' ></i>
+                </div>
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ################## -->
+    <!-- Reviews -->
+    <!-- ################## -->
+
+
+    <section class="reviews" id="reviews">
+        <div class="section-heading">
+            <h2>Avis <span>Clients</span></h2>
+        </div>
+
+        <div class="reviews-container">
+            <div class="review-box">
+                <img src="./images/review-01.jpg" alt="">
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                </div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam nesciunt debitis ducimus, consequuntur at expedita.</p>
+                <h2>William Hooks</h2>
+            </div>
+            <div class="review-box">
+                <img src="./images/review-02.jpg" alt="">
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                </div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam nesciunt debitis ducimus, consequuntur at expedita.</p>
+                <h2>Luc Hanks</h2>
+            </div>
+            <div class="review-box">
+                <img src="./images/review-03.jpg" alt="">
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                </div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam nesciunt debitis ducimus, consequuntur at expedita.</p>
+                <h2>Peter Does</h2>
+            </div>
+        </div>
+
+
+    </section>
+
+    
+    <!-- ################## -->
+    <!-- Footer-->
+    <!-- ################## -->
+
+
+    <footer>
+
+        <div class="footer-box">
+            <h2>ESHOP</h2>
+            <div class="social">
+                <i class='bx bxl-facebook' ></i>
+                <i class='bx bxl-instagram' ></i>
+                <i class='bx bxl-twitter' ></i>
+                <i class='bx bxl-youtube' ></i>
+            </div>
+        </div>
+
+   
+        <div class="footer-box">
+            <h2>Informations</h2>
+            <li>
+                <a href="#">Conditions de vente</a>
+            </li>
+            <li>
+                <a href="#">Mentions légales</a>
+            </li>
+            <li>
+                <a href="#">Support</a>
+            </li>
+            <li>
+                <a href="#">Nous contacter</a>
+            </li>
+        </div>
+
+        <div class="footer-box">
+            <h2>Nos locaux</h2>
+            <li>
+                <a href="#">France</a>
+            </li>
+            <li>
+                <a href="#">Algerie</a>
+            </li>
+            <li>
+                <a href="#">Espagne</a>
+            </li>
+            <li>
+                <a href="#">Italie</a>
+            </li>
+            <li>
+                <a href="#">Canada</a>
+            </li>
+        </div>
+
+        <div class="footer-box">
+            <h3>Paiements</h3>
+            <div class="payement">
+                <img src="./images/pay-01.png" alt="">
+                <img src="./images/pay-02.png" alt="">
+                <img src="./images/pay-03.png" alt="">
+                <img src="./images/pay-04.png" alt="">
+            </div>
+        </div>
+
+    </footer>
+
+    <div class="copy">
+        <p>&copy; La Minute De Code - Tous droits réservés - 2023</p>
+    </div>
+
+    <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+ 
+    <script src="app.js"></script>
+</body>
+</html>
