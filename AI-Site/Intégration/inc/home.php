@@ -7,6 +7,6 @@
         <div class="home-content">
             <p><?php echo the_field('sub_title');?></p>
             <h1><?php echo the_field('title');?></h1>
-            <a href="#devises" class="home-icon"><ion-icon name="chevron-down-outline"></ion-icon></a>
+            <a href="#devises" class="home-icon"><ion-icon name="chevron-down-outline"></ion-icon></a><
         </div>
     </section>
