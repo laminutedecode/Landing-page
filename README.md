@@ -18,7 +18,7 @@ Vous pouvez personnaliser chaque projet en modifiant le contenu HTML, les styles
 
 ## Licence
 
-Ce répertoire est sous licence MIT. Vous pouvez trouver les détails complets de la licence dans le fichier [LICENSE](./LICENSE).
+Ce répertoire est sous licence MIT. Vous pouvez trouver les détails complets de la licence dans le fichier license
 
 ## Auteur
 
