@@ -56,6 +56,9 @@ var swiper = new Swiper(".home ", {
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
+      fonction, jikdkdjkjkskofk;
+      jhjmùfkfùffjfjkjkjk
+      nfgeflkm<)varlg,ggp
     },
 
   });

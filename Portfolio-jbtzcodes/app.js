@@ -40,10 +40,16 @@ ScrollReveal({
 
 });
 
+
+
 ScrollReveal().reveal('.home-content, .section-title', { origin: 'top' });
 ScrollReveal().reveal('.home-img, .services-content, .portfolio-box, .contact form', { origin: 'bottom' });
 ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
+
+
+
+
 
 
 const typed = new Typed('.multiple', {

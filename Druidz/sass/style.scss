@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Euphoria+Script&family=Roboto:ital,wght@0,400;1,100;1,700&display=swap');
+@import './variables.scss';
+@import './mixins.scss';
+
+
+
+@font-face {
+  font-family: 'euphorigenic';
+  src: URL('./euphorigenic.ttf') format('truetype');
+}
+
+//  ############################# Global
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: $dark;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: euphorigenic;
+  color: $jaune;
+}
+
+button {
+  @include btnStyle;
+}
+
+button:hover {
+@include btnStyleHover;
+}
+
+
+
+//  ############################# Nav
+
+nav {
+  width: 100%;
+  height: 80px;
+  @include flexCenter;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.nav-logo img {
+  width: 50px;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  position: relative;
+}
+
+.nav-menu li {
+  margin: 0 1rem;
+  position: relative;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  font-size: 15px;
+  color: $light;
+  font-weight: bold;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-menu li a::before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  background: no-repeat center / cover url('../sources/perle.png');
+  position: absolute;
+  bottom: -2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  display: none;
+}
+
+.nav-menu li a:hover {
+  color: $jaune;
+}
+
+.nav-menu li a:hover::before {
+  display: block;
+}
+
+.nav-burger {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  z-index: 20;
+  display: none;
+}
+
+.ligne {
+  background: $light;
+  width: 100%;
+  height: 3px;
+  border-radius: 2px;
+  position: absolute;
+}
+
+.ligne:nth-child(1){
+  top: 0;
+}
+.ligne:nth-child(2){
+  top: 18px;
+  transition: transform 0.2s ease-in,
+                  opacity 0.2s ease-in
+}
+.ligne:nth-child(3){
+  top: 36px;
+}
+
+.ligne:nth-child(1), .ligne:nth-child(3){
+  transition: top .2s ease-in,
+                    transform .2s ease-in-out .2s;
+}
+
+.nav-burger.active .ligne:nth-child(2){
+  transform: translateX(-100px);
+  opacity: 0;
+}
+.nav-burger.active .ligne:nth-child(1){
+  top: 18px;
+  transform: rotate(130deg);
+  background: $jaune;
+}
+.nav-burger.active .ligne:nth-child(3){
+  top: 18px;
+  transform: rotate(-130deg);
+  background: $jaune;
+}
+
+
+//  ############################# Medias querries
+
+
+@media screen and (max-width: 780px){
+  .nav-menu {
+    @include absoluteCenter;
+    @include flexCenter;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    transition: left .2s ease-in;
+    z-index: 15;
+  }
+  .nav-menu li {
+    margin: 2rem 0;
+  }
+  .nav-burger {
+    display: block;
+  }
+
+  .nav-menu.active{
+          left: 50%;
+        }
+}
+
+//  ############################# Header 
+
+header {
+  @include flexCenter;
+  max-width: 100%;
+  min-height: 100vh;
+  background: no-repeat center / cover url(../sources/fond.jpg);
+  background-attachment: fixed;
+  clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
+  padding: 0 1rem;
+}
+
+.header-box{
+  max-width: 800px;
+  width: 100%;
+  color: $light;
+  padding: 0 1rem;
+}
+
+.header-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+header h1 {
+  font-size: calc(25px + 2vw + 10px)
+}
+
+header h1, header p {
+  margin-bottom: 1rem;
+}
+
+header a {
+  text-decoration: none;
+  @include btnStyle;
+  font-size: 14px;
+  line-height: 40px;
+  text-align: center;
+}
+
+header a:hover {
+  @include btnStyleHover;
+}
+
+
+//  ############################# Section presentation et info
+
+
+.presentation, .infos {
+  @include gridBuild;
+  padding: 0 1rem;
+}
+.container-infos {
+  background: $light;
+  clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
+  padding: 2rem 0;
+}
+.box-infos-content {
+  margin-top: 2rem;
+}
+.box-infos-content p{
+  color: $dark;
+}
+
+.box-presentation, .box-infos-content {
+width: 100%;
+height: auto;
+ font-size: 18px;
+ color: $light;
+ padding: 0 1rem;
+}
+
+.box-presentation h2,  .box-infos-content h2 {
+  font-size: calc(20px + .5vw + 5px);
+  border-left: 3px solid $jaune;
+  padding-left: 1rem;
+}
+.box-presentation p,  .box-infos-content p {
+  margin: 1rem 0;
+}
+
+.box-presentation-img, .box-infos-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.box-presentation a, .box-infos-content a {
+  text-decoration: none;
+  @include btnStyle;
+  font-size: 14px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.box-presentation a:hover,  .box-infos-content a:hover {
+@include btnStyleHover;
+}
+
+
+//  ############################# cartes
+
+.container-cards {
+  @include flexCenter;
+  margin: 5rem 0;
+  flex-wrap: wrap;
+  padding: 0 2rem;
+}
+
+.card {
+  width: 280px;
+  height: 530px;
+  flex-shrink: 0;
+  border-radius: 15px;
+  background:  $light;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 5px rgba(0,0,0,.2);
+  margin: 3rem 60px;
+}
+
+.card-fond-img {
+  height: 40%;
+  background: no-repeat center / cover url('../sources//fond.jpg');
+  position: relative;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.card-fond-img img {
+  width: 300px;
+  position: absolute;
+  top: 60px;
+ left: 50%;
+ transform: translate(-50%,-50%);
+} 
+
+.card-title {
+  height: 5%;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.card-info {
+  text-align: justify;
+  height: 30%;
+  padding: 10px 30px 0 30px;
+  line-height: 18px;
+  font-size: 15px;
+}
+
+.card-box-btn {
+  height: 15%;
+  @include flexCenter;
+}
+
+
+//  ############################# FORM
+.contact {
+ max-width: 1000px;
+ width: 100%;
+ margin: 0 auto;
+  padding: 0 1rem;
+  position: relative;
+  padding-bottom: 2rem;
+}
+
+.contact h2 {
+  text-align: center;
+  font-size: 40px;
+}
+
+form {
+  margin: 2rem 0;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.group-input {
+
+  border-bottom: 1px solid $light;
+  margin: 30px 0;
+}
+
+ input {
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;  
+  color: $light;
+}
+
+ label {
+  color: $light;
+  font-size: 16px;
+  pointer-events: none;
+}
+
+
+textarea {
+  width: 100%;
+  height: 300px;
+  background: none;
+  color: $light;
+  border:none;
+  outline:none;
+  padding: 0 1rem;
+  padding-top: 1rem;
+}
+
+
+//  ############################# FOOTER
+
+
+footer {
+  width: 100%;
+  height: 80px;
+  @include flexCenter;
+  color: $light;
+  border-top: 2px solid $jaune;
+  text-align: center;
+}
+
+
+
+
+
